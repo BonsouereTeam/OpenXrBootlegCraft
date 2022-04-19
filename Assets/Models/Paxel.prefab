@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 795368503738437024}
+  - component: {fileID: 963115970531428600}
   m_Layer: 0
   m_Name: Paxel
   m_TagString: Untagged
@@ -33,6 +34,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963115970531428600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18691543865841434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152a046d378f20b47960c36c404d6bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 7406544667864217760}
+  shaft: {fileID: 6659453420434296239}
 --- !u!1 &508745687255636015
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,8 +61,9 @@ GameObject:
   - component: {fileID: 3711895841353579652}
   - component: {fileID: 2253417741580847278}
   - component: {fileID: 3764158834338152692}
+  - component: {fileID: 7406544667864217760}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Head
   m_TagString: Paxel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,6 +164,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &7406544667864217760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508745687255636015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9875238d6a157c047804e40c3e89d6d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paxel: {fileID: 963115970531428600}
 --- !u!1 &4483937699378193483
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,8 +190,9 @@ GameObject:
   - component: {fileID: 8030082749991869588}
   - component: {fileID: 2715128398179740117}
   - component: {fileID: 1772181336755635217}
+  - component: {fileID: 6659453420434296239}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Shaft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,3 +293,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &6659453420434296239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483937699378193483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 793299cf3253dff4c9c24ff846b2ffb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paxel: {fileID: 963115970531428600}
