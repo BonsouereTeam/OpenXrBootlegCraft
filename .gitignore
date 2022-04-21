@@ -70,5 +70,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 /Builds
-/[Aa]ssets/Bakery
+/[Aa]ssets/Bakery/
 /[Aa]ssets/[Ee]ditor/x64/Bakery
+
+!/[Aa]ssets/Bakery/shader/*
