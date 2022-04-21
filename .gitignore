@@ -72,5 +72,3 @@ crashlytics-build.properties
 /Builds
 /[Aa]ssets/Bakery/
 /[Aa]ssets/[Ee]ditor/x64/Bakery
-
-!/[Aa]ssets/Bakery/shader/*
