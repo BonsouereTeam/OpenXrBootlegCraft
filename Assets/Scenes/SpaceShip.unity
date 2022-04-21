@@ -8613,7 +8613,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 539fc69ca07ed5c4c87b7986ca51d61c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 539fc69ca07ed5c4c87b7986ca51d61c,
         type: 3}
@@ -8688,6 +8688,47 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 1846401983}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &660619318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0b4dd729a12d046982652f834580a2, type: 3}
+  m_Name: SpaceShip_LMA1
+  m_EditorClassIdentifier: 
+  resolution: 512
+  bitmask: 1
+  id: 1
+  sortingID: 1
+  isImplicit: 1
+  area: 0
+  totalVertexCount: 0
+  vertexCounter: 0
+  sceneLodLevel: -1
+  sceneName: SpaceShip
+  containsTerrains: 0
+  probes: 0
+  mode: 1
+  renderMode: 1000
+  renderDirMode: 1000
+  atlasPacker: 1000
+  computeSSS: 0
+  sssSamples: 16
+  sssDensity: 10
+  sssColor: {r: 1, g: 1, b: 1, a: 1}
+  sssScale: 1
+  fakeShadowBias: 0
+  transparentSelfShadow: 0
+  flipNormal: 0
+  parentName: 
+  overridePath: 
+  fixPos3D: 0
+  voxelSize: {x: 1, y: 1, z: 1}
+  passedFilter: 0
 --- !u!43 &734756302
 Mesh:
   m_ObjectHideFlags: 0
@@ -8918,7 +8959,7 @@ Transform:
   m_Children:
   - {fileID: 320908175}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1226113844
 GameObject:
@@ -9083,7 +9124,7 @@ MonoBehaviour:
   renderSettingsRTPVSceneView: 0
   renderSettingsRTPVWidth: 640
   renderSettingsRTPVHeight: 360
-  lastBakeTime: 17
+  lastBakeTime: 21
   enlightenWarningShown: 0
   enlightenWarningShown2: 0
   lightUIDs: dae91445d26c0d0d834400bd5f06e03ee1a8113a6dece02d07178cc1
@@ -9299,17 +9340,21 @@ MonoBehaviour:
     cookie: {fileID: 0}
     angle: 30
   implicitGroups:
-  - {fileID: 1995622418}
-  - {fileID: 1995622418}
-  - {fileID: 1995622418}
+  - {fileID: 660619318}
+  - {fileID: 1279880021}
+  - {fileID: 1279880021}
+  - {fileID: 1279880021}
   implicitGroupedObjects:
-  - {fileID: 833286939}
-  - {fileID: 155482871}
+  - {fileID: 1597807689}
   - {fileID: 16606808}
+  - {fileID: 155482871}
+  - {fileID: 833286939}
   bounds:
   - m_Center: {x: -1, y: 1.75, z: -4.7254767}
     m_Extent: {x: 2, y: 2.25, z: 4.7254767}
-  hasEmissive: 01
+  - m_Center: {x: -0.9460145, y: 1.1018488, z: -8.862524}
+    m_Extent: {x: 0.5, y: 0.1777058, z: 0.4959039}
+  hasEmissive: 0101
   uvBuffOffsets: 
   uvBuffLengths: 
   uvSrcBuff: []
@@ -9321,14 +9366,15 @@ MonoBehaviour:
   lmGroupMinLOD: 
   lmGroupLODMatrix: 
   serverGetFileList: []
-  lightmapHasColor: 01
-  lightmapHasMask: 00
-  lightmapHasDir: 00
-  lightmapHasRNM: 00
+  lightmapHasColor: 0101
+  lightmapHasMask: 0000
+  lightmapHasDir: 0000
+  lightmapHasRNM: 0000
   modifiedAssetPathList: []
   modifiedAssets: []
   maps:
   - {fileID: 2800000, guid: 2f4415ab93b9170488b60ad4d4fe1b95, type: 3}
+  - {fileID: 2800000, guid: e7a333bc21b97af4db138ddd96bb41d0, type: 3}
   masks: []
   dirMaps: []
   rnmMaps0: []
@@ -9336,6 +9382,7 @@ MonoBehaviour:
   rnmMaps2: []
   mapsMode: 
   bakedRenderers:
+  - {fileID: 1597807693}
   - {fileID: 643317995}
   - {fileID: 362632380}
   - {fileID: 1148466517}
@@ -9343,11 +9390,12 @@ MonoBehaviour:
   - {fileID: 366870305}
   - {fileID: 1780111747}
   - {fileID: 253837111}
-  - {fileID: 833286941}
-  - {fileID: 155482873}
   - {fileID: 16606811}
-  bakedIDs: ffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000000000000000000000
+  - {fileID: 155482873}
+  - {fileID: 833286941}
+  bakedIDs: 01000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000000000000000000000
   bakedScaleOffset:
+  - {x: 0.8, y: 0.8, z: 0.5, w: 0.5}
   - {x: 1, y: 1, z: 0, w: 0}
   - {x: 1, y: 1, z: 0, w: 0}
   - {x: 1, y: 1, z: 0, w: 0}
@@ -9355,11 +9403,12 @@ MonoBehaviour:
   - {x: 1, y: 1, z: 0, w: 0}
   - {x: 1, y: 1, z: 0, w: 0}
   - {x: 1, y: 1, z: 0, w: 0}
-  - {x: NaN, y: NaN, z: NaN, w: NaN}
-  - {x: NaN, y: NaN, z: NaN, w: NaN}
   - {x: 1.0129888, y: 1.0100621, z: 0, w: 0}
-  bakedVertexOffset: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  - {x: NaN, y: NaN, z: NaN, w: NaN}
+  - {x: NaN, y: NaN, z: NaN, w: NaN}
+  bakedVertexOffset: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
   bakedVertexColorMesh:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -9378,27 +9427,58 @@ MonoBehaviour:
   bakedScaleOffsetTerrain: []
   assetList: []
   uvOverlapAssetList: 
-  idremap: 00000000
+  idremap: 0000000001000000
   usesRealtimeGI: 0
   emptyDirectionTex: {fileID: 0}
   anyVolumes: 0
   compressedVolumes: 0
   sectors:
   - name: $G
-    maps: []
+    maps:
+    - {fileID: 2800000, guid: 2f4415ab93b9170488b60ad4d4fe1b95, type: 3}
     masks: []
     dirMaps: []
     rnmMaps0: []
     rnmMaps1: []
     rnmMaps2: []
     mapsMode: 
-    bakedRenderers: []
+    bakedRenderers:
+    - {fileID: 643317995}
+    - {fileID: 362632380}
+    - {fileID: 1148466517}
+    - {fileID: 1902558941}
+    - {fileID: 366870305}
+    - {fileID: 1780111747}
+    - {fileID: 253837111}
+    - {fileID: 833286941}
+    - {fileID: 155482873}
+    - {fileID: 16606811}
     bakedRenderersTerrain: []
-    bakedIDs: 
+    bakedIDs: ffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000000000000000000000
     bakedIDsTerrain: 
-    bakedScaleOffset: []
+    bakedScaleOffset:
+    - {x: 1, y: 1, z: 0, w: 0}
+    - {x: 1, y: 1, z: 0, w: 0}
+    - {x: 1, y: 1, z: 0, w: 0}
+    - {x: 1, y: 1, z: 0, w: 0}
+    - {x: 1, y: 1, z: 0, w: 0}
+    - {x: 1, y: 1, z: 0, w: 0}
+    - {x: 1, y: 1, z: 0, w: 0}
+    - {x: NaN, y: NaN, z: NaN, w: NaN}
+    - {x: NaN, y: NaN, z: NaN, w: NaN}
+    - {x: 1.0129888, y: 1.0100621, z: 0, w: 0}
     bakedScaleOffsetTerrain: []
-    bakedVertexColorMesh: []
+    bakedVertexColorMesh:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     nonBakedRenderers: []
 --- !u!4 &1226312417
 Transform:
@@ -9937,6 +10017,47 @@ MonoBehaviour:
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1279880021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0b4dd729a12d046982652f834580a2, type: 3}
+  m_Name: SpaceShip_LM0
+  m_EditorClassIdentifier: 
+  resolution: 512
+  bitmask: 1
+  id: 0
+  sortingID: 0
+  isImplicit: 1
+  area: 671.09186
+  totalVertexCount: 0
+  vertexCounter: 0
+  sceneLodLevel: -1
+  sceneName: SpaceShip
+  containsTerrains: 0
+  probes: 0
+  mode: 1
+  renderMode: 1000
+  renderDirMode: 1000
+  atlasPacker: 1000
+  computeSSS: 0
+  sssSamples: 16
+  sssDensity: 10
+  sssColor: {r: 1, g: 1, b: 1, a: 1}
+  sssScale: 1
+  fakeShadowBias: 0
+  transparentSelfShadow: 0
+  flipNormal: 0
+  parentName: 
+  overridePath: 
+  fixPos3D: 0
+  voxelSize: {x: 1, y: 1, z: 1}
+  passedFilter: 0
 --- !u!1001 &1316329104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10556,6 +10677,18 @@ MonoBehaviour:
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!1 &1597807689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6359752388587030216, guid: 1f6239b3fde222844af8ae50a2c44e94,
+    type: 3}
+  m_PrefabInstance: {fileID: 1316329104}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1597807693 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6694879124687149625, guid: 1f6239b3fde222844af8ae50a2c44e94,
+    type: 3}
+  m_PrefabInstance: {fileID: 1316329104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1602203534
 GameObject:
   m_ObjectHideFlags: 0
@@ -11340,44 +11473,3 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   m_HasMigratedActions: 1
---- !u!114 &1995622418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0b4dd729a12d046982652f834580a2, type: 3}
-  m_Name: SpaceShip_LM0
-  m_EditorClassIdentifier: 
-  resolution: 512
-  bitmask: 1
-  id: 0
-  sortingID: 0
-  isImplicit: 1
-  area: 666.29193
-  totalVertexCount: 0
-  vertexCounter: 0
-  sceneLodLevel: -1
-  sceneName: SpaceShip
-  containsTerrains: 0
-  probes: 0
-  mode: 1
-  renderMode: 1000
-  renderDirMode: 1000
-  atlasPacker: 1000
-  computeSSS: 0
-  sssSamples: 16
-  sssDensity: 10
-  sssColor: {r: 1, g: 1, b: 1, a: 1}
-  sssScale: 1
-  fakeShadowBias: 0
-  transparentSelfShadow: 0
-  flipNormal: 0
-  parentName: 
-  overridePath: 
-  fixPos3D: 0
-  voxelSize: {x: 1, y: 1, z: 1}
-  passedFilter: 0
