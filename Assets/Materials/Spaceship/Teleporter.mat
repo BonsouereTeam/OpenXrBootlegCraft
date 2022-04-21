@@ -8,12 +8,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Teleporter
-  m_Shader: {fileID: 4800000, guid: 44078aff4de957844a86ead7ad169295, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _BAKERY_NONE
+  m_Shader: {fileID: 4800000, guid: 9829e18681954944a8b25de9b080a0b6, type: 3}
+  m_ValidKeywords:
   - _EMISSION
   - _LIGHTMAPSPECULAR
+  m_InvalidKeywords:
+  - _BAKERY_NONE
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
