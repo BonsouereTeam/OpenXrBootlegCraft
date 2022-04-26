@@ -8,6 +8,7 @@ public class ChunkFactory : MonoBehaviour
     [Header("Components")]
     public Chunk chunkPrototype;
     public Material material;
+    public Camera camera;
 
     //Dimensions
     public int CHUNK_WIDTH { get; private set; } = 32;
@@ -56,6 +57,11 @@ public class ChunkFactory : MonoBehaviour
         chunkPrototype.caveThreshold = caveThreshold;
         chunkPrototype.scale = scale;
         chunkPrototype.heightScale = heightScale;
+
+
+        float halfWorldSize = (CHUNK_WIDTH * (int)worldsize - (int)worldsize) * 0.5F;
+        camera.transform.position = new Vector3(halfWorldSize, CHUNK_HEIGHT, halfWorldSize);
+        camera.orthographicSize = halfWorldSize;
 
         StartCoroutine("GenerateWorld");
     }
