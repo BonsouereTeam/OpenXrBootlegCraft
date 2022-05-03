@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Screen 1
+  m_Name: Screen
   m_Shader: {fileID: 4800000, guid: 9829e18681954944a8b25de9b080a0b6, type: 3}
   m_ValidKeywords:
   - _EMISSION
