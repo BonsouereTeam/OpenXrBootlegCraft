@@ -2,20 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
+
+public enum ControllerSide
+{
+	Left,
+	Right
+}
 
 public class HandPresence : MonoBehaviour
 {
 	public InputDeviceCharacteristics controllerCharacteristics;
 	public GameObject handModelPrefab;
+	public ControllerSide controllerSide;
 
 	private InputDevice targetDevice;
 	private GameObject spawnedHandModel;
 	private Animator handAnimator;
+	private HandAction handAction;
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		TryInitialize();
+		handAction = PlayerController.Instance.getAction(controllerSide);
+		handAction.interactor = transform.parent.parent.GetComponent<XRRayInteractor>();
+
 	}
 
 	void TryInitialize()
@@ -44,6 +56,8 @@ public class HandPresence : MonoBehaviour
 		{
 			//Permet d'animer la main selon la pression détecter
 			handAnimator.SetFloat("Trigger", triggerValue);
+			handAction.pressBumper = triggerValue;
+			handAction.isPressingBumper = triggerValue > 0.3f; ;
 		}
 		else
 		{
@@ -53,6 +67,8 @@ public class HandPresence : MonoBehaviour
 		if (targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
 		{
 			handAnimator.SetFloat("Grip", gripValue);
+			handAction.grab = gripValue;
+			handAction.isGrabbing = gripValue > 0.3f;
 		}
 		else
 		{
