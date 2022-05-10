@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 1227796337}
   - component: {fileID: 1227796336}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: ButtonStand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1227796335
 Transform:
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227796334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06250009, y: 2.0000002, z: 2.5365}
-  m_LocalScale: {x: 1, y: 4, z: 1}
+  m_LocalPosition: {x: 0.06250009, y: 0.32, z: 2.5365}
+  m_LocalScale: {x: 1, y: 7.357792, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4301284428868624829}
@@ -110,13 +110,14 @@ GameObject:
   - component: {fileID: 1584528636}
   - component: {fileID: 1584528635}
   - component: {fileID: 4402098990178134569}
+  - component: {fileID: 1584528638}
   m_Layer: 0
   m_Name: Teleport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1584528633
 Transform:
   m_ObjectHideFlags: 0
@@ -195,8 +196,21 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0.00000005960465, y: 0, z: -0.00000020861627}
+  m_Size: {x: 2, y: 2, z: 1.6629039}
+  m_Center: {x: 0.00000009934107, y: 0, z: -0.16854867}
+--- !u!114 &1584528638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584528632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7644d47f10668d04f8fad0ffd262db36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 0}
 --- !u!1 &265106820920469020
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28e27cacfc7e70479097f0a63c37217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UID: -286864604
+  UID: -802120803
   color: {r: 0, g: 1, b: 0.95828146, a: 1}
   intensity: 0.5
   texture: {fileID: 0}
@@ -664,7 +678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28e27cacfc7e70479097f0a63c37217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UID: 1428213728
+  UID: -1987364252
   color: {r: 0, g: 1, b: 0.95828146, a: 1}
   intensity: 0.5
   texture: {fileID: 0}
@@ -772,7 +786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28e27cacfc7e70479097f0a63c37217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UID: -1098606853
+  UID: -2063750522
   color: {r: 0, g: 1, b: 0.95828146, a: 1}
   intensity: 0.5
   texture: {fileID: 0}
@@ -963,7 +977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28e27cacfc7e70479097f0a63c37217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UID: 1723404864
+  UID: 1539477280
   color: {r: 0, g: 1, b: 0.95828146, a: 1}
   intensity: 0.5
   texture: {fileID: 0}
@@ -1071,7 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28e27cacfc7e70479097f0a63c37217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UID: -1789468311
+  UID: -1271946573
   color: {r: 0, g: 1, b: 0.95828146, a: 1}
   intensity: 0.5
   texture: {fileID: 0}
@@ -1205,7 +1219,7 @@ PrefabInstance:
     - target: {fileID: 308627233, guid: 1f6239b3fde222844af8ae50a2c44e94, type: 3}
       propertyPath: toggledObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1584528632}
     - target: {fileID: 308627233, guid: 1f6239b3fde222844af8ae50a2c44e94, type: 3}
       propertyPath: isToggleButton
       value: 0
@@ -1237,7 +1251,7 @@ PrefabInstance:
     - target: {fileID: 3562219768476794689, guid: 1f6239b3fde222844af8ae50a2c44e94,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 24
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 4301284430042731386, guid: 1f6239b3fde222844af8ae50a2c44e94,
         type: 3}
@@ -1252,7 +1266,7 @@ PrefabInstance:
     - target: {fileID: 4301284430042731386, guid: 1f6239b3fde222844af8ae50a2c44e94,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25
+      value: 0.13591033
       objectReference: {fileID: 0}
     - target: {fileID: 4301284430042731386, guid: 1f6239b3fde222844af8ae50a2c44e94,
         type: 3}
@@ -1262,17 +1276,17 @@ PrefabInstance:
     - target: {fileID: 4301284430042731386, guid: 1f6239b3fde222844af8ae50a2c44e94,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.014
+      value: -0.013999939
       objectReference: {fileID: 0}
     - target: {fileID: 4301284430042731386, guid: 1f6239b3fde222844af8ae50a2c44e94,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.469
+      value: 0.48329726
       objectReference: {fileID: 0}
     - target: {fileID: 4301284430042731386, guid: 1f6239b3fde222844af8ae50a2c44e94,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.025
+      value: 0.025000095
       objectReference: {fileID: 0}
     - target: {fileID: 4301284430042731386, guid: 1f6239b3fde222844af8ae50a2c44e94,
         type: 3}
@@ -1317,7 +1331,7 @@ PrefabInstance:
     - target: {fileID: 5140573322463386784, guid: 1f6239b3fde222844af8ae50a2c44e94,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 24
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 5848991508256745118, guid: 1f6239b3fde222844af8ae50a2c44e94,
         type: 3}
