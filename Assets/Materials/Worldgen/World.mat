@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: World
-  m_Shader: {fileID: 4800000, guid: 5e113a53e79ae504fa1424f6ed187055, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6fd0379080340094cb88d4743f32958a, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _BAKERY_NONE
@@ -24,7 +24,7 @@ Material:
     m_TexEnvs:
     - _BumpMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 100, y: 100}
         m_Offset: {x: 0, y: 0}
     - _DFG:
         m_Texture: {fileID: 2800000, guid: b6b1f1fa6be1ce54f8bcd5428c160a28, type: 3}
@@ -46,9 +46,13 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MainTex:
+    - _MOESMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e92cb019137792e46a4c85ff01736427, type: 3}
+        m_Scale: {x: 0.01, y: 0.01}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -84,6 +88,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Emission: 0
     - _ExposureOcclusion: 0.2
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -91,11 +96,15 @@ Material:
     - _LTCGI: 0
     - _LightmapSpecular: 1
     - _LightmapSpecularMaxSmoothness: 1
+    - _MapScale: 1
     - _Metallic: 0
+    - _MetallicScale: 0
     - _Mode: 0
     - _NormalMapShadows: 0
+    - _OcclusionScale: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _SmoothnessScale: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -109,4 +118,7 @@ Material:
     - _Color2: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _UVTransform0: {r: 1, g: 0, b: 0, a: 0}
+    - _UVTransform1: {r: 0, g: 1, b: 0, a: 0}
+    - _UVTransform2: {r: 0, g: 0, b: 1, a: 0}
   m_BuildTextureStacks: []

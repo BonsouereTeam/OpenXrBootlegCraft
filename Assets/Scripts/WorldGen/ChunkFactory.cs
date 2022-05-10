@@ -11,8 +11,8 @@ public class ChunkFactory : MonoBehaviour
     public Camera camera;
 
     //Dimensions
-    public int CHUNK_WIDTH { get; private set; } = 32;
-    public int CHUNK_HEIGHT { get; private set; } = 256;
+    public int CHUNK_WIDTH { get; private set; } = 16;
+    public int CHUNK_HEIGHT { get; private set; } = 128;
 
     [Header("Generation Settings")]
     public long seed = 0;
@@ -51,7 +51,7 @@ public class ChunkFactory : MonoBehaviour
         chunkPrototype.width = CHUNK_WIDTH;
         chunkPrototype.height = CHUNK_HEIGHT;
 
-        chunkPrototype.seed = seed;
+        chunkPrototype.seed = new System.Random().Next(int.MinValue,int.MaxValue);
         chunkPrototype.heightAmplification = heightAmplification;
         chunkPrototype.amplification = amplification;
         chunkPrototype.caveThreshold = caveThreshold;

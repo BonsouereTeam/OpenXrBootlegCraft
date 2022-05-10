@@ -695,6 +695,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
+    Android: BAKERY_INCLUDED
     Standalone: BAKERY_INCLUDED
   additionalCompilerArguments: {}
   platformArchitecture: {}
