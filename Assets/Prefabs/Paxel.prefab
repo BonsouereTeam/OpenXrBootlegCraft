@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 963115970531428600}
   m_Layer: 0
   m_Name: Paxel
-  m_TagString: Untagged
+  m_TagString: Paxel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 5822954591854161677}
   m_Layer: 0
   m_Name: Shaft
-  m_TagString: Untagged
+  m_TagString: Paxel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
