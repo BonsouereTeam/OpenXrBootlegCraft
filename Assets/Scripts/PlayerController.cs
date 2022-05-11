@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,7 +12,13 @@ public class PlayerController : MonoBehaviour
     public Bag[] bags;
     private HandAction leftHandAction = new();
     private HandAction rightHandAction = new();
-    
+    /*[SerializeField] private InputActionReference jumpActionReference;
+    private CharacterController controller;
+    private Vector3 velocite;
+    private float hauteurSaut = 1.0f;
+    private float gravite = -9.81f;*/
+
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -26,11 +33,13 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       // controller = gameObject.GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Jump();
     }
     public HandAction getAction(ControllerSide side)
     {
@@ -54,5 +63,18 @@ public class PlayerController : MonoBehaviour
                 break;
             }
         }
+    }
+
+    private void Jump()
+    {
+       /* if (velocite.y < 0) velocite.y = 0f;
+
+        if (jumpActionReference.action.triggered)
+        {
+            velocite.y += Mathf.Sqrt(hauteurSaut * -3.0f * gravite);
+        }
+
+        velocite.y += gravite * Time.deltaTime;
+        controller.Move(velocite * Time.deltaTime);*/
     }
 }
