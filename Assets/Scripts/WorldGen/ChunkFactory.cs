@@ -9,6 +9,7 @@ public class ChunkFactory : MonoBehaviour
     public Chunk chunkPrototype;
     public Material material;
     public Camera camera;
+    public GameObject rock;
 
     //Dimensions
     public int CHUNK_WIDTH { get; private set; } = 16;
@@ -21,6 +22,9 @@ public class ChunkFactory : MonoBehaviour
     public float caveThreshold = -3;
     public float scale = 0.05F;
     public float heightScale = 0.01F;
+    public int rockAmount = 50;
+    public int rockDeviation = 30;
+    private int actualRockAmount = 0;
 
     public WorldSize worldsize;
     public bool IsGenerated { get; private set; } = false;
@@ -34,6 +38,7 @@ public class ChunkFactory : MonoBehaviour
         Large = 32,
         Huge = 64
     }
+    private int worldSizeCalculated;
 
     //Offsets
     private int offsetX = 0;
@@ -51,19 +56,20 @@ public class ChunkFactory : MonoBehaviour
         chunkPrototype.width = CHUNK_WIDTH;
         chunkPrototype.height = CHUNK_HEIGHT;
 
-        chunkPrototype.seed = new System.Random().Next(int.MinValue,int.MaxValue);
+        chunkPrototype.seed = UnityEngine.Random.Range(int.MinValue,int.MaxValue);
         chunkPrototype.heightAmplification = heightAmplification;
         chunkPrototype.amplification = amplification;
         chunkPrototype.caveThreshold = caveThreshold;
         chunkPrototype.scale = scale;
         chunkPrototype.heightScale = heightScale;
+        actualRockAmount = UnityEngine.Random.Range(rockAmount-30,rockAmount+30);
+        worldSizeCalculated = (int)worldsize * CHUNK_WIDTH;
 
-
-        float halfWorldSize = (CHUNK_WIDTH * (int)worldsize - (int)worldsize) * 0.5F;
+        float halfWorldSize = (worldSizeCalculated - (int)worldsize) * 0.5F;
         camera.transform.position = new Vector3(halfWorldSize, CHUNK_HEIGHT, halfWorldSize);
         camera.orthographicSize = halfWorldSize;
 
-        StartCoroutine("GenerateWorld");
+        StartCoroutine(GenerateWorld());
     }
 
     IEnumerator GenerateWorld()
@@ -87,5 +93,23 @@ public class ChunkFactory : MonoBehaviour
             yield return null;
         }
         TheWorldHasFinishedGenerating?.Invoke();
+
+        for (int i = 0; i < actualRockAmount; i++)
+        {
+
+            float x = UnityEngine.Random.Range(0, worldSizeCalculated);
+            float z = UnityEngine.Random.Range(0, worldSizeCalculated);
+
+            
+
+            RaycastHit hit;
+            if (Physics.Raycast(new Vector3(x, camera.transform.position.y, z), Vector3.down, out hit, CHUNK_HEIGHT))
+            {
+                GameObject rockInstance = Instantiate(rock, hit.point, Quaternion.identity);
+            }
+
+            yield return null;
+        }
+
     }
 }
